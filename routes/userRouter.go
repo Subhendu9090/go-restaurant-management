@@ -9,7 +9,7 @@ import (
 func UserRoutes(inComingRoutes *mux.Router) {
 	inComingRoutes.HandleFunc("/users", controllers.GetUsers).Methods("GET")
 	inComingRoutes.HandleFunc("/user/{user_id}", controllers.GetUser).Methods("GET")
-	inComingRoutes.HandleFunc("/users/signUp", controllers.SignUp()).Methods("POST")
-	inComingRoutes.HandleFunc("/users/login", controllers.Login()).Methods("POST")
+	inComingRoutes.HandleFunc("/users/signUp", controllers.SignUp).Methods("POST")
+	inComingRoutes.HandleFunc("/users/login", controllers.Login).Methods("POST")
 
 }
