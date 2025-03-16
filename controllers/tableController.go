@@ -1,6 +1,13 @@
 package controllers
 
-import "net/http"
+import (
+	"golang-restaurant-management/database"
+	"net/http"
+
+	"go.mongodb.org/mongo-driver/mongo"
+)
+
+var tableCollection *mongo.Collection = database.GetCollectionName("table")
 
 func GetTables(w http.ResponseWriter, r *http.Request) {
 
